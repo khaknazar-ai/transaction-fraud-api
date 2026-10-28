@@ -1,0 +1,59 @@
+{
+  "model_name": "random_forest",
+  "target_column": "isFraud",
+  "features": {
+    "categorical": [
+      "type"
+    ],
+    "numerical": [
+      "step",
+      "amount",
+      "oldbalanceOrg",
+      "newbalanceOrig",
+      "oldbalanceDest",
+      "newbalanceDest"
+    ]
+  },
+  "risk_policy": {
+    "approve_threshold": 0.3,
+    "review_threshold": 0.7
+  },
+  "validation_metrics": {
+    "threshold": 0.5,
+    "roc_auc": 0.9989436970567531,
+    "pr_auc": 0.9837433117416198,
+    "precision": 0.7472324723247232,
+    "recall": 0.9866017052375152,
+    "f1": 0.8503937007874016,
+    "confusion_matrix": {
+      "true_negative": 57810,
+      "false_positive": 548,
+      "false_negative": 22,
+      "true_positive": 1620
+    }
+  },
+  "test_metrics": {
+    "threshold": 0.5,
+    "roc_auc": 0.9985746222922729,
+    "pr_auc": 0.9836003780838614,
+    "precision": 0.7577174929840973,
+    "recall": 0.9860012172854534,
+    "f1": 0.8569161597460989,
+    "confusion_matrix": {
+      "true_negative": 57839,
+      "false_positive": 518,
+      "false_negative": 23,
+      "true_positive": 1620
+    }
+  },
+  "validation_policy_distribution": {
+    "approve": 57202,
+    "manual_review": 1072,
+    "block": 1726
+  },
+  "test_policy_distribution": {
+    "approve": 57259,
+    "manual_review": 1042,
+    "block": 1699
+  }
+}

@@ -11,6 +11,7 @@ logs/*
 !logs/.gitkeep
 reports/*
 !reports/.gitkeep
+!reports/metrics.json
 mlruns/
 mlartifacts/
 outputs/
