@@ -1,0 +1,13 @@
+services:
+  fraud-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "127.0.0.1:8000:8000"
+    volumes:
+      - ./models:/app/models:ro
+      - ./reports:/app/reports:ro
+      - ./logs:/app/logs
+    environment:
+      - PYTHONUNBUFFERED=1

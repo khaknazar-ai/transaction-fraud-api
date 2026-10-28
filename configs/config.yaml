@@ -1,0 +1,8 @@
+paths:
+  model_dir: models
+  report_dir: reports
+  log_dir: logs
+
+risk_policy:
+  approve_threshold: 0.30
+  review_threshold: 0.70
